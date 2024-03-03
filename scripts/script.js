@@ -23,24 +23,6 @@ const loadLatestPosts = async () => {
 
 loadLatestPosts();
 
-function customSearch(){
-    const searchText = searchInputField.value.toLowerCase();
-
-    if(searchText == "comedy"){
-        customDataLoad(searchText);
-    }
-    else if(searchText == 'music'){
-        customDataLoad(searchText);
-    }
-    else if(searchText == 'coding'){
-        customDataLoad(searchText);
-    }
-    else{
-        alert("Please type correct catagory");
-    }
-    
-  }
-
 const customDataLoad = async(searchText) =>{
     const res = await fetch(
         `
@@ -51,7 +33,3 @@ const customDataLoad = async(searchText) =>{
       const postData = data.posts;
       displayDailyPosts(postData);
 }
-
-
-
-// customDataLoad();

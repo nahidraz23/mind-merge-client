@@ -125,3 +125,21 @@ function displayDailyPosts (posts) {
     })
   }
 
+  function customSearch(){
+    const searchText = searchInputField.value.toLowerCase();
+
+    if(searchText == "comedy"){
+        customDataLoad(searchText);
+    }
+    else if(searchText == 'music'){
+        customDataLoad(searchText);
+    }
+    else if(searchText == 'coding'){
+        customDataLoad(searchText);
+    }
+    else{
+        alert("Please type correct catagory");
+    }
+    
+  }
+
