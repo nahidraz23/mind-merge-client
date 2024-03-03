@@ -12,15 +12,21 @@
 
     <!-- custom CSS -->
     <link rel="stylesheet" href="./styles/style.css">
+
+    <!-- fontawesome kit -->
+    <script src="https://kit.fontawesome.com/93d4bcfdcc.js" crossorigin="anonymous"></script>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
 </head>
 
-<body>
+<body class="">
 
-    <header class="container mx-auto">
+    <header class="container mx-auto p-4 lg:p-0">
 
         <!-- navbar section -->
-        <nav class="my-14">
-            <div class="navbar bg-base-100">
+        <nav class="lg:my-14">
+            <div class="flex justify-around lg:justify-between bg-base-100">
                 <div class="navbar-start">
                     <div class="dropdown">
                         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -31,55 +37,61 @@
                             </svg>
                         </div>
                     </div>
-                    <a class="text-4xl font-mulish font-extrabold"><span
+                    <a class="text-2xl lg:text-4xl font-mulish font-extrabold"><span
                             class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">M</span>ind<span
                             class="text-transparent bg-clip-text bg-gradient-to-r from-[#797DFC] to-pink-600">M</span>erge</a>
                 </div>
-                <div class="navbar-end gap-3">
-                    <a class="btn btn-circle btn-outline bg-gray-100 border-gray-300" title="Home"><svg
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                        </svg>
-                    </a>
-                    <a class="btn btn-circle btn-outline bg-gray-100 border-gray-300" title="Pencil"><svg
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
-                        </svg>
-                    </a>
-                    <a class="btn btn-circle btn-outline bg-gray-100 border-gray-300" title="User-Plus"><svg
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
-                        </svg>
-                    </a>
-                    <a class="btn btn-circle btn-outline bg-gray-100 border-gray-300" title="Flag"><svg
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5" />
-                        </svg>
-                    </a>
-                    <a
-                        class="btn rounded-3xl font-mulish font-bold text-xl text-white ml-3 btn-color border-none hover:text-black">Sign
-                        In</a>
+                <div class="flex">
+                    <div class="gap-3">
+                        <div class="hidden lg:inline">
+                            <a class="btn btn-circle btn-outline bg-gray-100 border-gray-300" title="Home"><svg
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                                </svg>
+                            </a>
+                            <a class="btn btn-circle btn-outline bg-gray-100 border-gray-300" title="Pencil"><svg
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
+                                </svg>
+                            </a>
+                            <a class="btn btn-circle btn-outline bg-gray-100 border-gray-300" title="User-Plus"><svg
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+                                </svg>
+                            </a>
+                            <a class="btn btn-circle btn-outline bg-gray-100 border-gray-300" title="Flag"><svg
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <a class="btn rounded-3xl font-mulish font-bold lg:text-xl text-white ml-3 btn-color border-none hover:text-black">
+                            Sign In
+                        </a>
+                    </div>
                 </div>
             </div>
         </nav>
 
         <!-- banner section -->
         <section
-            class="lg:w-auto lg:h-[550px] bg-[url('./images/bgbanner.png')] bg-banner-color bg-repeat-round rounded-[55px] flex flex-col lg:flex-row items-center p-24">
+            class="lg:w-auto lg:h-[550px] bg-[url('./images/bgbanner.png')] bg-banner-color bg-no-repeat lg:bg-repeat-round rounded-[55px] flex flex-col lg:flex-row items-center p-10 lg:p-24 mt-5 lg:mt-0">
 
             <div class="space-y-5">
-                <h1 class="font-mulish lg:text-6xl text-white font-extrabold w-auto lg:w-2/3">Welcome to the <span
+                <h1 class="font-mulish text-3xl lg:text-6xl text-white font-extrabold w-auto lg:w-2/3 text-center lg:text-left">Welcome to the <span
                         class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">MindMerge</span>
                     Forum</h1>
-                <p class="font-medium lg:text-xl font-mulish text-gray-400 lg:w-1/2">Share your favorite opinion and win
+                <p class="font-medium lg:text-xl font-mulish text-gray-400 lg:w-1/2 text-center lg:text-left">Share your favorite opinion and win
                     and wp
                     forum coffee mug!</p>
                 <label class="input rounded-3xl flex items-center lg:w-1/2 h-16">
@@ -88,35 +100,47 @@
                         class="btn btn-color border-none rounded-3xl text-xl font-bold font-mulish text-white hover:text-black">Search</span>
                 </label>
             </div>
-            <div class="card w-96 bg-white ">
-                <div class="card-body">
-                    <table>
-                        <tbody>
-                            <tr class="font-mulish font-medium lg:text-2xl">
-                                <td>Registered Users</td>
-                                <td>01</td>
-                            </tr>
-                            <tr class="font-mulish font-medium lg:text-2xl">
-                                <td>Forum</td>
-                                <td>05</td>
-                            </tr>
-                            <tr class="font-mulish font-medium lg:text-2xl">
-                                <td>Topics</td>
-                                <td>01</td>
-                            </tr>
-                            <tr class="font-mulish font-medium lg:text-2xl">
-                                <td>Replies</td>
-                                <td>01</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div class="card w-full lg:w-96 bg-white mt-5 lg:mt-0">
+                <div class="card-body space-y-6">
+                    <div class="flex justify-between font-mulish font-medium text-2xl">
+                        <div>
+                            <h1>Registered Users</h1>
+                        </div>
+                        <div>
+                            <p>01</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between font-mulish font-medium text-2xl">
+                        <div>
+                            <h1>Forum</h1>
+                        </div>
+                        <div>
+                            <p>05</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between font-mulish font-medium text-2xl">
+                        <div>
+                            <h1>Topics</h1>
+                        </div>
+                        <div>
+                            <p>01</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between font-mulish font-medium text-2xl">
+                        <div>
+                            <h1>Replies</h1>
+                        </div>
+                        <div>
+                            <p>01</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
     </header>
 
-    <main class="container mx-auto mt-24">
+    <main class="container mx-auto mt-10 lg:mt-24 p-4 lg:p-0">
 
         <!-- lets discuss section -->
         <section class="flex flex-col items-center space-y-6">
@@ -127,8 +151,8 @@
 
         <!-- Daily post section -->
         <section class="mt-12">
-            <div class="flex gap-6">
-                <div class="flex gap-6 p-12 bg-gray-100 rounded-2xl border-2 border-gray-300 grow">
+            <div class="flex flex-col lg:flex-row gap-6">
+                <div class="flex flex-col lg:flex-row gap-6 p-12 bg-gray-100 rounded-2xl border-2 border-gray-300 grow">
                     <div>
                         <div class="avatar online">
                             <div class="w-24 rounded-xl">
@@ -153,7 +177,7 @@
                         </div>
                         <hr class="my-5 border-dashed border-gray-500">
                         <div class="flex items-center justify-between">
-                            <div class="flex gap-6">
+                            <div class="flex gap-2 lg:gap-6">
                                 <div class="flex gap-3">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-400">
@@ -224,12 +248,12 @@
         </section>
 
         <!-- Join our forum section -->
-        <section class="mt-24 lg:w-auto lg:h-[400px] bg-[#12132D] rounded-[32px]">
-            <div class="flex p-20 ">
+        <section class="mt-10 lg:mt-24 lg:w-auto lg:h-[400px] bg-[#12132D] rounded-[32px]">
+            <div class="flex flex-col-reverse lg:flex-row p-10 lg:p-20 ">
                 <div class="text-white font-mulish space-y-8">
                     <div class="space-y-4">
-                        <h1 class=" text-4xl font-extrabold">Join Our Forum</h1>
-                        <p class="text-lg text-gray-400">
+                        <h1 class="text-2xl lg:text-4xl font-extrabold">Join Our Forum</h1>
+                        <p class="lg:text-lg text-gray-400">
                             Share your favorite opinion and win and wp forum coffee mug! Yes, you can run unit tests and
                             view the results directly within the app.
                         </p>
@@ -247,13 +271,13 @@
         </section>
 
         <!-- Latest post section -->
-        <section class="mt-24">
+        <section class="mt-10 lg:mt-24">
             <div class="flex flex-col items-center gap-6">
                 <h1 class="font-mulish font-extrabold text-4xl">Latest Posts</h1>
-                <p class="font-inter text-lg text-gray-400 w-1/2 text-center">Yes, you can run unit tests and view the
+                <p class="font-inter text-lg text-gray-400 lg:w-1/2 text-center">Yes, you can run unit tests and view the
                     results directly within the app. The integrated testing features allow for a streamlined .</p>
             </div>
-            <div class="flex gap-6 mt-12">
+            <div class="flex flex-col lg:flex-row gap-6 mt-12">
                 <div class="space-y-4 border-2 border-gray-300 rounded-3xl p-6">
                     <div class="h-[190px] bg-gray-200 rounded-3xl">
                         <img src="" alt="">
@@ -355,8 +379,26 @@
 
     </main>
 
-    <footer>
-
+    <footer class="bg-gray-200 p-10 lg:py-24 mt-10 lg:mt-24">
+        <div class="container mx-auto">
+            <div class="flex flex-col items-center space-y-4">
+                <h1
+                    class="text-4xl font-mulish font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+                    MindMerge</h1>
+                <p class="font-mulish text-center lg:w-1/2">Contrary to popular belief, Lorem Ipsum is not simply random
+                    text. It has roots in a piece of classical Latin literature from 45 BC</p>
+                <div class="space-x-8">
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-github"></i>
+                </div>
+            </div>
+            <hr class="my-6 lg:my-12 border-gray-300">
+            <div>
+                <h1 class="font-mulish text-gray-400 text-center">2024, All Rights Reserved.</h1>
+            </div>
+        </div>
     </footer>
 
 </body>
