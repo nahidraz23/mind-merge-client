@@ -8,3 +8,11 @@
 .font-mulish{
     font-family: "Mulish", sans-serif;
 }
+
+.btn-primary{
+    background-color: rgb(121, 125, 252);
+}
+
+.bg-banner-color{
+    background-color: rgb(18, 19, 45);
+}
