@@ -99,9 +99,9 @@
                     and wp
                     forum coffee mug!</p>
                 <label class="input rounded-3xl flex items-center lg:w-1/2 h-16">
-                    <input type="text" class="grow" placeholder="Search here anything" />
-                    <span
-                        class="btn btn-color border-none rounded-3xl text-xl font-bold font-mulish text-white hover:text-black">Search</span>
+                    <input id="search-input-field" type="text" class="grow" placeholder="Search here anything" />
+                    <span 
+                    onclick="customSearch()" id="btn-search" class="btn btn-color border-none rounded-3xl text-xl font-bold font-mulish text-white hover:text-black">Search</span>
                 </label>
             </div>
             <div class="card w-full lg:w-96 bg-white mt-5 lg:mt-0">
@@ -155,9 +155,9 @@
 
         <!-- Daily post section -->
         <section class="mt-12 flex flex-col lg:flex-row gap-6">
-            <div id="daily-post-container" class="flex flex-col gap-4 w-full">
-                
-                </div>
+            <div id="daily-post-container" class="flex flex-col gap-4 w-full h-auto">
+
+            </div>
             </div>
             <div class="bg-gray-100 rounded-2xl p-6 space-y-4 h-[500px]">
                 <div class="flex justify-between">
@@ -173,7 +173,7 @@
                 </div>
                 <div class="flex gap-4 bg-white p-4 rounded-2xl justify-between">
                     <h1 class="font-mulish font-semibold w-2/3">10 Kids Unaware of Their Halloween Costume</h1>
-                    <div class="flex gap-3">
+                    <div class="flex gap-3 items-center">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6 text-gray-400">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -219,7 +219,7 @@
                     results directly within the app. The integrated testing features allow for a streamlined .</p>
             </div>
             <div id="latest-post-container" class="flex flex-col lg:flex-row gap-6 mt-12">
-                
+
             </div>
         </section>
 
@@ -247,8 +247,8 @@
         </div>
     </footer>
 
-
     <!-- Link JS file -->
+    <script src="./scripts/utility.js"></script>
     <script src="./scripts/script.js"></script>
 </body>
 
