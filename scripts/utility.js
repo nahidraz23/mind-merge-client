@@ -88,7 +88,7 @@ function displayDailyPosts (posts, id) {
               </div>
           </div>
 
-          <div class="post-id">${post.id}</div>
+          <div class="post-id hidden">${post.id}</div>
 
           <button onclick="markAsRead()" class="btn btn-circle bg-green-500">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
