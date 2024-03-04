@@ -1,11 +1,14 @@
-const loadAllPosts = async () => {
+const loadAllPosts = async (postData) => {
   const res = await fetch(
     'https://openapi.programming-hero.com/api/retro-forum/posts'
   )
   const data = await res.json();
-  const postData = data.posts;
+  postData = data.posts;
 
-  displayDailyPosts(postData);
+  setTimeout(() => {
+    displayDailyPosts(postData);
+  }, 2000)
+  
 };
 
 loadAllPosts();
@@ -14,7 +17,6 @@ const loadLatestPosts = async () => {
   const res = await fetch(
     'https://openapi.programming-hero.com/api/retro-forum/latest-posts'
   );
-
   const data = await res.json();
   const posts = data;
 
@@ -28,8 +30,23 @@ const customDataLoad = async(searchText) =>{
         `
         https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchText}
         `
-      )
+      );
       const data = await res.json();
       const postData = data.posts;
       displayDailyPosts(postData);
 }
+
+const postId = async() => {
+    const res = await fetch(
+        'https://openapi.programming-hero.com/api/retro-forum/posts'
+      )
+      const data = await res.json();
+      const id = data.posts;
+      console.log(id)
+      // markAsRead(id);
+}
+
+
+
+
+

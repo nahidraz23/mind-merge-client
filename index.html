@@ -44,29 +44,29 @@
                 <div class="flex">
                     <div class="gap-3">
                         <div class="hidden lg:inline">
-                            <a class="btn btn-circle btn-outline bg-gray-100 border-gray-300 hover:text-purple-400" title="Home"><svg
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            <a class="btn btn-circle btn-outline bg-gray-100 border-gray-300 hover:text-purple-400"
+                                title="Home"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
                                 </svg>
                             </a>
-                            <a class="btn btn-circle btn-outline bg-gray-100 border-gray-300 hover:text-purple-400" title="Pencil"><svg
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            <a class="btn btn-circle btn-outline bg-gray-100 border-gray-300 hover:text-purple-400"
+                                title="Pencil"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125" />
                                 </svg>
                             </a>
-                            <a class="btn btn-circle btn-outline bg-gray-100 border-gray-300 hover:text-purple-400" title="User-Plus"><svg
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ">
+                            <a class="btn btn-circle btn-outline bg-gray-100 border-gray-300 hover:text-purple-400"
+                                title="User-Plus"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
                                 </svg>
                             </a>
-                            <a class="btn btn-circle btn-outline bg-gray-100 border-gray-300 hover:text-purple-400" title="Flag"><svg
-                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            <a class="btn btn-circle btn-outline bg-gray-100 border-gray-300 hover:text-purple-400"
+                                title="Flag"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ">
                                     <path stroke-linecap="round" stroke-linejoin="round"
                                         d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5" />
@@ -100,8 +100,8 @@
                     forum coffee mug!</p>
                 <label class="input rounded-3xl flex items-center lg:w-1/2 h-16">
                     <input id="search-input-field" type="text" class="grow" placeholder="Search here anything" />
-                    <span 
-                    onclick="customSearch()" id="btn-search" class="btn btn-color border-none rounded-3xl text-xl font-bold font-mulish text-white hover:text-black">Search</span>
+                    <span onclick="customSearch()" id="btn-search"
+                        class="btn btn-color border-none rounded-3xl text-xl font-bold font-mulish text-white hover:text-black">Search</span>
                 </label>
             </div>
             <div class="card w-full lg:w-96 bg-white mt-5 lg:mt-0">
@@ -158,9 +158,8 @@
             <div id="daily-post-container" class="flex flex-col gap-4 w-full">
 
             </div>
-            </div>
-            <div class="bg-gray-100 rounded-2xl p-6 space-y-4 lg:h-[500px]">
-                <div class="flex justify-between">
+            <div id="mark-as-read-container"  class="bg-gray-100 rounded-2xl p-6 space-y-4 ">
+                <div class="flex justify-between lg:w-[412px]">
                     <h1 class="font-mulish font-bold text-xl">Title</h1>
                     <div class="flex">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -171,19 +170,9 @@
                         <p>Mark as read(<span>0</span>)</p>
                     </div>
                 </div>
-                <div class="flex gap-4 bg-white p-4 rounded-2xl justify-between">
-                    <h1 class="font-mulish font-semibold w-2/3">10 Kids Unaware of Their Halloween Costume</h1>
-                    <div class="flex gap-3 items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-6 h-6 text-gray-400">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                        </svg>
-                        <p class="text-gray-400">550</p>
-                    </div>
-                </div>
+                <!-- <div  class="flex flex-col bg-white p-4 rounded-2xl justify-between">
+                    
+                </div> -->
             </div>
         </section>
 
@@ -231,12 +220,17 @@
                 <h1
                     class="text-4xl font-mulish font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
                     MindMerge</h1>
-                <p class="font-mulish text-center lg:w-1/2">Explore the depths of thought and creativity with MindMerge Blog.</p>
+                <p class="font-mulish text-center lg:w-1/2">Explore the depths of thought and creativity with MindMerge
+                    Blog.</p>
                 <div class="space-x-8 ">
-                    <i class="fa-brands fa-twitter hover:cursor-pointer hover:text-purple-600 text-2xl" title="Twitter"></i>
-                    <i class="fa-brands fa-facebook hover:cursor-pointer hover:text-purple-600 text-2xl" title="Facebook"></i>
-                    <i class="fa-brands fa-instagram hover:cursor-pointer hover:text-purple-600 text-2xl" title="Instagram"></i>
-                    <i class="fa-brands fa-github hover:cursor-pointer hover:text-purple-600 text-2xl" title="GitHub"></i>
+                    <i class="fa-brands fa-twitter hover:cursor-pointer hover:text-purple-600 text-2xl"
+                        title="Twitter"></i>
+                    <i class="fa-brands fa-facebook hover:cursor-pointer hover:text-purple-600 text-2xl"
+                        title="Facebook"></i>
+                    <i class="fa-brands fa-instagram hover:cursor-pointer hover:text-purple-600 text-2xl"
+                        title="Instagram"></i>
+                    <i class="fa-brands fa-github hover:cursor-pointer hover:text-purple-600 text-2xl"
+                        title="GitHub"></i>
                 </div>
             </div>
             <hr class="my-6 lg:my-12 border-gray-300">
