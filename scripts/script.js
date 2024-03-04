@@ -36,17 +36,6 @@ const customDataLoad = async(searchText) =>{
       displayDailyPosts(postData);
 }
 
-const postId = async() => {
-    const res = await fetch(
-        'https://openapi.programming-hero.com/api/retro-forum/posts'
-      )
-      const data = await res.json();
-      const id = data.posts;
-      console.log(id)
-      // markAsRead(id);
-}
-
-
 
 
 
