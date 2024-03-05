@@ -155,10 +155,16 @@
 
         <!-- Daily post section -->
         <section class="mt-12 flex flex-col lg:flex-row gap-6">
+
+            <span id="loading" class="loading loading-spinner loading-lg p-72 text-purple-500 hidden"></span>
+
             <div id="daily-post-container" class="flex flex-col gap-4 w-full">
 
             </div>
-            <div id="mark-as-read-container"  class="bg-gray-100 rounded-2xl p-6 space-y-4 ">
+
+            
+
+            <div id="mark-as-read-container" class="bg-gray-100 rounded-2xl p-6 space-y-4 ">
                 <div class="flex justify-between lg:w-[412px]">
                     <h1 class="font-mulish font-bold text-xl">Title</h1>
                     <div class="flex">
@@ -167,12 +173,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                         </svg>
 
-                        <p>Mark as read(<span>0</span>)</p>
+                        <p class="text-gray-400">Mark as read(<span id="mark-count">0</span>)</p>
                     </div>
                 </div>
-                <!-- <div  class="flex flex-col bg-white p-4 rounded-2xl justify-between">
-                    
-                </div> -->
             </div>
         </section>
 

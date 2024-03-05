@@ -1,21 +1,24 @@
-const dailyPostContainer = document.getElementById('daily-post-container')
+const dailyPostContainer = document.getElementById('daily-post-container');
 
-const latestPostContainer = document.getElementById('latest-post-container')
+const latestPostContainer = document.getElementById('latest-post-container');
 
-const searchInputField = document.getElementById('search-input-field')
+const searchInputField = document.getElementById('search-input-field');
 
-const searchBtn = document.getElementById('btn-search')
+const searchBtn = document.getElementById('btn-search');
 
 const markAsReadBtn = document.getElementById('mark-as-read-button');
 
-// console.log(markAsReadBtn);
+const markAsReadContainer = document.getElementById('mark-as-read-container');
 
-const markAsReadContainer = document.getElementById('mark-as-read-container')
+const markCount = document.getElementById('mark-count');
 
-// console.log(markAsReadContainer)
+const loadingIcon = document.getElementById('loading');
+
+let count = 0;
 
 function displayDailyPosts (posts, id) {
   dailyPostContainer.textContent = ''
+  loadingIcon.classList.add('hidden')
 
   posts.forEach(post => {
     const postCard = document.createElement('div')
@@ -88,19 +91,15 @@ function displayDailyPosts (posts, id) {
               </div>
           </div>
 
-          <div class="post-id hidden">${post.id}</div>
+          <button onclick="markAsRead('${post.title}', ('${post.view_count}'))" class="btn btn-circle bg-green-500">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
+</svg>
 
-          <button onclick="markAsRead()" class="btn btn-circle bg-green-500">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-          stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:cursor-pointer ">
-          <path stroke-linecap="round" stroke-linejoin="round"
-              d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-      </svg>
             </button>
       </div>
       `
-    dailyPostContainer.appendChild(postCard);
-    
+    dailyPostContainer.appendChild(postCard)
   })
 }
 
@@ -143,11 +142,15 @@ function displayLatestPosts (posts) {
           </div>
       </div>
       `
-      latestPostContainer.appendChild(postCard)
+    latestPostContainer.appendChild(postCard)
   })
 }
 
 function customSearch () {
+  dailyPostContainer.textContent = ''
+
+  loadingIcon.classList.remove('hidden');
+
   const searchText = searchInputField.value.toLowerCase()
 
   if (searchText == 'comedy') {
@@ -156,7 +159,31 @@ function customSearch () {
     customDataLoad(searchText)
   } else if (searchText == 'coding') {
     customDataLoad(searchText)
-  } else {
-    alert('Please type correct catagory')
   }
+}
+
+const markAsRead = async(title, viewCount) => {
+  const markedDiv = document.createElement('div');
+  markedDiv.className = 'flex bg-white p-4 rounded-2xl justify-between';
+
+  if(title.includes("'")){
+    
+    console.log('txt');
+  }
+ 
+  markedDiv.innerHTML = `
+  <h1 class="font-mulish font-semibold">${title}</h1>
+  <div class="flex gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-gray-400">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+        </svg>
+        
+      <p class="text-gray-400 font-inter">${viewCount}</p>
+  </div>
+  `;
+  markAsReadContainer.appendChild(markedDiv);
+  count++;
+
+  markCount.innerText = count;
 }
