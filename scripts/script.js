@@ -6,8 +6,6 @@ const loadAllPosts = async (postData) => {
   postData = data.posts;
   
   displayDailyPosts(postData);
-
-  
 };
 
 loadAllPosts();
@@ -37,15 +35,3 @@ const customDataLoad = async(searchText) =>{
         displayDailyPosts(postData);
       }, 2000)
 }
-
-// const data = async () => {
-//   const res = await fetch(
-//     'https://openapi.programming-hero.com/api/retro-forum/posts'
-//   )
-//   const allData = await res.json()
-//   console.log(allData.posts.id)
-// }
-
-// data()
-
-
